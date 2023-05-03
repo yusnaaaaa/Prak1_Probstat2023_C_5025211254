@@ -105,6 +105,9 @@ x = 0
 lambda = 1.8
 dpois(x, lambda)
 ```
+
+<img width="688" alt="image" src="https://user-images.githubusercontent.com/91377793/236003151-b2374377-1ba3-491d-a75b-f9d5929d8660.png">
+
 Setelah dijalankan, didapat hasil seperti berikut : ```[1] 0.1652989```
 
 * **b. Ada 4 kematian akibat kanker tulang yang dilaporkan di kalangan pekerja pabrik ban, apakah itu peristiwa yang tidak biasa? Hitung probabilitas berdasarkan distribusi yang telah dipilih.**<br />
@@ -114,6 +117,8 @@ x <- 4
 dist_pois <- dpois(x, lambda)
 cat("Probabilitas ada 4 kematian akibat kanker tulang =", dist_pois)
 ```
+
+<img width="428" alt="image" src="https://user-images.githubusercontent.com/91377793/236003365-5cb119f0-0d08-45a3-823f-6498a8b97318.png">
 
 Setelah dijalankan, maka didapatkan bahwa Probabilitas ada 4 kematian akibat kanker tulang yang dilaporkan di kalangan pekerja pabrik ban adalah ```0.07230173```. Ini merupakan peristiwa yang tidak biasa.
 
@@ -125,6 +130,8 @@ dist_pois <- ppois(x, lambda)
 cat("Peluang paling banyak 4 kematian akibat kanker tulang =", dist_pois)
 ```
 
+<img width="461" alt="image" src="https://user-images.githubusercontent.com/91377793/236003683-68e648be-d53b-4aa6-8f1c-81e780cef53f.png">
+
 Setelah dijaLankan, maka didapatkan Peluang paling banyak 4 kematian akibat kanker tulang adalah ```0.9635933```
 
 * **d. Berapa peluang lebih dari 4 kematian akibat kanker tulang?**<br />
@@ -134,6 +141,8 @@ x <- 4
 dist_pois <- 1 - ppois(x, lambda)
 cat("Peluang lebih dari 4 kematian akibat kanker tulang =", dist_pois)
 ```
+
+<img width="441" alt="image" src="https://user-images.githubusercontent.com/91377793/236003764-e97e2965-7510-4909-a224-0c510abd6411.png">
 
 Setelah dijalankan, maka didapatkan bahwa Peluang lebih dari 4 kematian akibat kanker tulang adalah ```0.03640666```
 
@@ -149,6 +158,9 @@ cat("Nilai harapan banyak kematian akibat kanker tulang =", nilai_har)
 std_dev <- sd <- sqrt(lambda)
 cat("Standar deviasi banyak kematian akibat kanker tulang =", std_dev)
 ```
+
+<img width="442" alt="image" src="https://user-images.githubusercontent.com/91377793/236003837-69af9c81-6a5d-4d94-9ce5-ab6034b5399c.png">
+
 Maka, didapatkan nilai harapan atau mean ```1.8``` dan simpangan baku atau standar deviasi ```1.341641```
 
 * **f. Gambarkan histogram pendistribusian banyak banyak kematian akibat kanker tulang untuk pekerja pabrik ban.**<br />
@@ -161,6 +173,7 @@ x <- 1000
 hist(rpois(x, lambda), xlab = "Jumlah Kematian", ylab = "Frekuensi", main = "Histogram Pendistribusian Banyak Kematian Akibat Kanker Tulang")
 ```
 Output:<br />
+<img width="501" alt="image" src="https://user-images.githubusercontent.com/91377793/236003997-a8c70628-cb8d-407a-8b26-4e97f8ca8f5c.png">
 
 * **g. Gunakan simulasi untuk memeriksa hasil sebelumnya.**<br />
 Untuk melakukan simulasi pada Distribusi Poisson dapat menggunakan fungsi ```replicate()```yang mana untuk melakukan simulasi distribusi Poisson sebanyak n_simulasi kali. Fungsi ini akan mengembalikan array hasil simulasi dengan dimensi n_simulasi x 1. Pada setiap iterasi simulasi, menggunakan fungsi rpois() untuk menghasilkan nilai Poisson acak yang mewakili jumlah kematian akibat kanker tulang di antara para pekerja pabrik ban selama 20 tahun. Fungsi rpois() memerlukan dua argumen, yaitu jumlah kejadian (n) dan rata-rata (lambda) dari distribusi Poisson yang diinginkan.<br />
@@ -173,6 +186,9 @@ replicate(n_simulasi, {
   sum(rpois(1,lambda))
 })
 ```
+
+<img width="633" alt="image" src="https://user-images.githubusercontent.com/91377793/236004147-877c7abb-39c6-43cd-8cb3-804a8caf7ad1.png">
+
 
 Setelah dijalankan, maka akan menghasilkan output sebagai berikut:
 ```
