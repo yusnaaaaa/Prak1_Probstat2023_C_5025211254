@@ -12,7 +12,7 @@ Jika kita asumsikan bahwa dalam satu hari di rumah sakit terdapat 10 kelahiran,
 maka:**
 
 * **a. Bagaimana pendistribusian banyak bayi laki-laki? Tentukan distribusi dengan parameter yang sesuai.** <br />
-Pendistribusian banyak bayi laki-laki adalah distribusi binomial dengan parameter ```n = 10``` dan ```p = 0,488```. Dengan metode distribusi Binomial, dapat menggunakan fungsi yang telah disediakan pada bahasa R, yaitu fungsi ```dbinom()''' yang berisi parameter x, n, p.
+Pendistribusian banyak bayi laki-laki adalah Distribusi Binomial dengan parameter ```n = 10``` dan ```p = 0,488```. Dengan metode Distribusi Binomial, dapat menggunakan fungsi yang telah disediakan pada bahasa R, yaitu fungsi ```dbinom()``` yang berisi parameter x, n, p.
 ```R
 x = 0:n
 n = 10
@@ -26,7 +26,7 @@ Setelah dijalankan, didapat hasil seperti berikut :
 0.0012379400 0.0117991160 0.0506071460 0.1286264960 0.2145449757 0.2453858160 0.1949027966 0.1061524160 0.0379411956 0.0080361560 0.0007659461
 ```
 * **b. Berapa probabilitas bahwa tepat tiga bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dbinom()``` yang berisi parameter x, n, p.
 ```R
 x <- 3
 dist_binom <- dbinom(x, n, p)
@@ -38,7 +38,7 @@ cat("Probabilitas tepat tiga bayi diantaranya laki-laki =", dist_binom)
 Setelah dijalankan, maka didapatkan hasil bahwa probabilitas tepat tiga bayi diantaranya laki-laki adalah ```0.1286265```
 
 * **c. Berapa probabilitas bahwa kurang dari tiga bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```pbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```pbinom()``` yang berisi parameter x, n, p.
 ```R
 x <- 2
 dist_binom <- pbinom(2, n, p)
@@ -50,7 +50,7 @@ cat("Probabilitas kurang dari tiga bayi diantaranya laki-laki =", dist_binom)
 Setelah dijalankan, didapatkan Probabilitas kurang dari tiga bayi diantaranya laki-laki adalah ```0.0636442```
 
 * **d. Berapa probabilitas bahwa tiga atau lebih bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```1-pbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```1-pbinom()``` yang berisi parameter x, n, p.
 ```R
 x <- 2
 dist_binom <- 1-pbinom(2, n, p)
@@ -99,7 +99,7 @@ Output: <br />
 >**Misalkan banyak kematian karena kanker tulang untuk seluruh pekerja di pabrik ban dalam 20 tahun ke depan adalah 1,8.**
 
 * **a. Bagaimana pendistribusian banyak kematian karena kanker tulang? Tentukan distribusi dengan parameter yang sesuai.**
-Pendistribusian banyak kematian karena kanker tulang adalah distribusi Poisson dengan parameter ```lambda = 1.8```. Dengan metode distribusi Poisson, dapat menggunakan fungsi yang telah disediakan pada bahasa R, yaitu fungsi ```dpois()''' yang berisi parameter x dan lambda.
+Pendistribusian banyak kematian karena kanker tulang adalah distribusi Poisson dengan parameter ```lambda = 1.8```. Dengan metode distribusi Poisson, dapat menggunakan fungsi yang telah disediakan pada bahasa R, yaitu fungsi ```dpois()``` yang berisi parameter x dan lambda.
 ```R
 x = 0
 lambda = 1.8
