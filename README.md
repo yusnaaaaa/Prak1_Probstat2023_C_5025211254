@@ -33,6 +33,8 @@ dist_binom <- dbinom(x, n, p)
 cat("Probabilitas tepat tiga bayi diantaranya laki-laki =", dist_binom)
 ```
 
+<img width="445" alt="image" src="https://user-images.githubusercontent.com/91377793/236000813-348b891f-15e2-42b1-9957-936f1e0b68d8.png">
+
 Setelah dijalankan, maka didapatkan hasil bahwa probabilitas tepat tiga bayi diantaranya laki-laki adalah ```0.1286265```
 
 * **c. Berapa probabilitas bahwa kurang dari tiga bayi di antaranya berjenis kelamin laki-laki?**<br />
