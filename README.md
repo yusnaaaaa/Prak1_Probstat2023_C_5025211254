@@ -45,6 +45,8 @@ dist_binom <- pbinom(2, n, p)
 cat("Probabilitas kurang dari tiga bayi diantaranya laki-laki =", dist_binom)
 ```
 
+<img width="481" alt="image" src="https://user-images.githubusercontent.com/91377793/236001546-6898ac2c-46e4-4e79-99e1-77820ed192cb.png">
+
 Setelah dijalankan, didapatkan Probabilitas kurang dari tiga bayi diantaranya laki-laki adalah ```0.0636442```
 
 * **d. Berapa probabilitas bahwa tiga atau lebih bayi di antaranya berjenis kelamin laki-laki?**<br />
@@ -54,6 +56,9 @@ x <- 2
 dist_binom <- 1-pbinom(2, n, p)
 cat("Probabilitas tiga atau lebih bayi diantaranya laki-laki =", dist_binom)
 ```
+
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/91377793/236001666-f545733f-0af7-4843-bb09-c9936620615d.png">
+
 Setelah dijalankan, didapatkan Probabilitas tiga atau lebih bayi diantaranya laki-laki adalah ```0.9363558```
 
 * **e. Berapa nilai harapan dan simpangan baku banyak bayi laki-laki?**<br />
@@ -73,6 +78,8 @@ simp_baku <- sd <- sqrt(n * p * (1 - p))
 cat("Simpangan baku banyak bayi laki-laki =", simp_baku)
 ```
 
+<img width="355" alt="image" src="https://user-images.githubusercontent.com/91377793/236001906-a9e73be3-90a4-49a0-950e-d5d85a1c9627.png">
+
 Maka, didapatkan nilai harapan atau mean ```4.88``` dan simpangan baku atau standar deviasi ```1.580683```
 
 * **f. Gambarkan histogram pendistribusian banyak bayi laki-laki.**<br />
@@ -86,6 +93,7 @@ hist(rbinom(x, n, p), xlab = "Jumlah Bayi Laki-Laki", ylab = "Frekuensi",main = 
 ```
 
 Output: <br />
+<img width="393" alt="image" src="https://user-images.githubusercontent.com/91377793/236002147-9dacc043-7acd-4049-bdec-c5fd4d6642cc.png">
 
 ## No 2
 >**Misalkan banyak kematian karena kanker tulang untuk seluruh pekerja di pabrik ban dalam 20 tahun ke depan adalah 1,8.**
