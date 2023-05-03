@@ -1,3 +1,9 @@
+"----------Praktikum Probabilitas dan Statistik Modul 1----------"
+# Nama  : Yusna Millaturrosyidah
+# NRP   : 5025211254
+# Kelas : Probabilitas dan Statistik C
+
+
 "----------No 1----------"
 x = 0:n
 n = 10
