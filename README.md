@@ -322,6 +322,8 @@ prob <- pt(x, df)
 cat("Probabilitas terjadinya suatu peristiwa acak X kurang dari -2.34 dengan 6 derajat kebebasan =", prob)
 ```
 
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/91377793/236007357-caa9e3ae-b448-4c10-b8b8-07c58e2f3387.png">
+
 Setelah dijalankan, maka didapatkan bahwa probabilitas terjadinya suatu peristiwa acak X kurang dari -2,34 dengan 6 derajat kebebasan ```0.02892197```
 
 * **b. Berapa probabilitas terjadinya suatu peristiwa acak X lebih dari 1,34 dengan 6 derajat kebebasan?**<br />
@@ -332,6 +334,8 @@ x <- 1.34
 prob <- 1 - pt(x, df)
 cat("Probabilitas terjadinya suatu peristiwa acak X kurang dari 1.34 dengan 6 derajat kebebasan =", prob)
 ```
+
+<img width="651" alt="image" src="https://user-images.githubusercontent.com/91377793/236007454-e7ce7beb-6467-49af-ba59-1a7f76415c1f.png">
 
 Setelah dijalankan, maka didapatkan bahwa probabilitas terjadinya suatu peristiwa acak X lebih dari 1,34 dengan 6 derajat kebebasan ```0.11438```
 
@@ -344,6 +348,8 @@ prob <- pt(-1.23, df) + (1-pt(1.23, df))
 cat("Probabilitas terjadinya suatu peristiwa acak X dari -1.23 atau lebih besar dari 1.23 dengan 3 derajat kebebasan =", prob)
 ```
 
+<img width="784" alt="image" src="https://user-images.githubusercontent.com/91377793/236007554-a3c03f40-b859-45ec-89e7-8a2d549324ba.png">
+
 Setelah dijalankan, maka didapatkan bahwa probabilitas terjadinya suatu peristiwa acak X kurang dari -1,23 atau lebih besar dari 1,23 dengan 3 derajat kebebasan ```0.306356```
 
 * **d. Berapa probabilitas terjadinya suatu peristiwa acak X berada di antara -0,94 dan 0,94 dengan 14 derajat kebebasan?**<br />
@@ -353,6 +359,8 @@ df = 14
 prob <- pt(0.94, df) - pt(-0.94, df)
 cat("Probabilitas terjadinya suatu peristiwa acak X dari -0.94 atau lebih besar dari 0.94 dengan 14 derajat kebebasan =", prob)
 ```
+
+<img width="786" alt="image" src="https://user-images.githubusercontent.com/91377793/236007641-98e08d36-dc9c-4a0c-accd-6189bb03a038.png">
 
 Setelah dijalankan, maka didapatkan bahwa probabilitas terjadinya suatu peristiwa acak X berada di antara -0,94 dan 0,94 dengan 14 derajat kebebasan ```0.6368457```
 
@@ -365,6 +373,8 @@ t_score <- qt(area, df, lower.tail = TRUE)
 cat("Nilai t-score dengan 5 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di sebelah kiri t-score =", t_score)
 ```
 
+<img width="887" alt="image" src="https://user-images.githubusercontent.com/91377793/236007747-961c4397-b1ea-4705-9a6a-9b2b9f60167a.png">
+
 Setelah dijalankan, maka didapatkan bahwa nilai t-score dengan 5 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di sebelah kiri t-score ```-2.337342```
 
 * **f. Berapa nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125 satuan persegi di bawah kurva dan di sebelah kanan t-score tersebut?**<br />
@@ -375,6 +385,8 @@ area <- 0.125
 t_score <- qt(area, df, lower.tail = FALSE)
 cat("Nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125 satuan persegi di bawah kurva dan di sebelah kanan t-score =", t_score)
 ```
+
+<img width="896" alt="image" src="https://user-images.githubusercontent.com/91377793/236007809-ee95bccf-f187-496a-b15e-242204122fef.png">
 
 Setelah dijalankan, maka didapatkan bahwa t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125 satuan persegi di bawah kurva dan di sebelah kanan t-score ```1.177716```
 
@@ -388,6 +400,8 @@ t_score_right <- qt((1-area)/2, df, lower.tail = FALSE)
 c(t_score_left,t_score_right)
 ```
 
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/91377793/236007958-5fa2811d-c766-4090-bb59-11bc9c58fee5.png">
+
 Setelah dijalankan, maka didapatkan bahwa nilai t-score dengan 11 derajat kebebasan yang memiliki luasan 0,75 satuan persegi di bawah kurva dan di antara t-score tersebut dan negatif dari nilai t-score ```-1.21446``` dan ```1.21446```
 
 * **h. Berapa nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di luar interval antara t-score tersebut dan negatif dari nilai t-score tersebut?**<br />
@@ -398,5 +412,7 @@ area <- 0.0333
 t_score <- abs(qt(area/2, df)) * c(-1, 1)
 c(t_score)
 ```
+
+<img width="268" alt="image" src="https://user-images.githubusercontent.com/91377793/236008032-f7096739-8ce8-48a7-80b9-e447bfbada40.png">
 
 Setelah dijalankan, maka didapatkan bahwa nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di luar interval antara t-score tersebut dan negatif dari nilai t-score ```-2.264201``` dan ```2.264201```
