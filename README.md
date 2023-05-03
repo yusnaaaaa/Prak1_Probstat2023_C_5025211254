@@ -26,7 +26,7 @@ Setelah dijalankan, didapat hasil seperti berikut :
 0.0012379400 0.0117991160 0.0506071460 0.1286264960 0.2145449757 0.2453858160 0.1949027966 0.1061524160 0.0379411956 0.0080361560 0.0007659461
 ```
 * **b. Berapa probabilitas bahwa tepat tiga bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dbinom()``` yang berisi parameter x, n, p. Dalam hal ini diketahui bahwa ```x = 3```
 ```R
 x <- 3
 dist_binom <- dbinom(x, n, p)
@@ -38,7 +38,7 @@ cat("Probabilitas tepat tiga bayi diantaranya laki-laki =", dist_binom)
 Setelah dijalankan, maka didapatkan hasil bahwa probabilitas tepat tiga bayi diantaranya laki-laki adalah ```0.1286265```
 
 * **c. Berapa probabilitas bahwa kurang dari tiga bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```pbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```pbinom()``` yang berisi parameter x, n, p. Diketahui bahwa nilai ```x = 2```
 ```R
 x <- 2
 dist_binom <- pbinom(2, n, p)
@@ -50,7 +50,7 @@ cat("Probabilitas kurang dari tiga bayi diantaranya laki-laki =", dist_binom)
 Setelah dijalankan, didapatkan Probabilitas kurang dari tiga bayi diantaranya laki-laki adalah ```0.0636442```
 
 * **d. Berapa probabilitas bahwa tiga atau lebih bayi di antaranya berjenis kelamin laki-laki?**<br />
-Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```1-pbinom()``` yang berisi parameter x, n, p.
+Dengan menggunakan Distribusi Binomial, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```1-pbinom()``` yang berisi parameter x, n, p. Dalam persoalan ini diketahui ```x = 2```
 ```R
 x <- 2
 dist_binom <- 1-pbinom(2, n, p)
@@ -62,6 +62,7 @@ cat("Probabilitas tiga atau lebih bayi diantaranya laki-laki =", dist_binom)
 Setelah dijalankan, didapatkan Probabilitas tiga atau lebih bayi diantaranya laki-laki adalah ```0.9363558```
 
 * **e. Berapa nilai harapan dan simpangan baku banyak bayi laki-laki?**<br />
+Diketahui bahwa ```n = 10``` dan ```p = 0.488```, Untuk menyelesaikan persoalan diatas dapat digunakan rumus-rumus dibawah ini :<br />
 Rumus yang digunakan untuk mencari nilai harapann atau rata-rata (mean) dari Distribusi Binomial<br />
 ```mean = n * p```<br />
 Rumus yang digunakan untuk mencari nilai simpangan baku atau standar deviasi dari Distribusi Binomial<br />
@@ -111,7 +112,7 @@ dpois(x, lambda)
 Setelah dijalankan, didapat hasil seperti berikut : ```[1] 0.1652989```
 
 * **b. Ada 4 kematian akibat kanker tulang yang dilaporkan di kalangan pekerja pabrik ban, apakah itu peristiwa yang tidak biasa? Hitung probabilitas berdasarkan distribusi yang telah dipilih.**<br />
-Dengan menggunakan Distribusi Poisson, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dpois()``` yang berisi parameter x dan lambda.
+Dengan menggunakan Distribusi Poisson, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, diketahui bahwa ```X = 4```, maka dapat diselesaikan dengan menggunakan fungsi ```dpois()``` yang berisi parameter x dan lambda. 
 ```R
 x <- 4
 dist_pois <- dpois(x, lambda)
@@ -123,7 +124,7 @@ cat("Probabilitas ada 4 kematian akibat kanker tulang =", dist_pois)
 Setelah dijalankan, maka didapatkan bahwa Probabilitas ada 4 kematian akibat kanker tulang yang dilaporkan di kalangan pekerja pabrik ban adalah ```0.07230173```. Ini merupakan peristiwa yang tidak biasa.
 
 * **c. Berapa peluang paling banyak 4 kematian akibat kanker tulang?**<br />
-Dengan menggunakan Distribusi Poisson, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```ppois()``` yang berisi parameter x dan lambda.
+Diketahui nilai ```x = 4```, maka soal ini dapat diselesaikan dengan menggunakan Distribusi Poisson, menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```ppois()``` yang berisi parameter x dan lambda.
 ```R
 x <- 4
 dist_pois <- ppois(x, lambda)
@@ -135,7 +136,7 @@ cat("Peluang paling banyak 4 kematian akibat kanker tulang =", dist_pois)
 Setelah dijaLankan, maka didapatkan Peluang paling banyak 4 kematian akibat kanker tulang adalah ```0.9635933```
 
 * **d. Berapa peluang lebih dari 4 kematian akibat kanker tulang?**<br />
-Dengan menggunakan Distribusi Poisson, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```1-ppois()``` yang berisi parameter x dan lambda.
+Dengan menggunakan Distribusi Poisson, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, diketahui bahwa ```X = 4```, maka dapat diselesaikan dengan menggunakan fungsi ```1-ppois()``` yang berisi parameter x dan lambda.
 ```R
 x <- 4
 dist_pois <- 1 - ppois(x, lambda)
@@ -223,6 +224,7 @@ Perhitungan menggunakan ```ppois``` akan menghasilkan hasil yang lebih tepat kar
 * **a. Fungsi probabilitas dari distribusi Chi-Square.**<br />
 Dengan menggunakan Distribusi Chi-Square, dapat menggunakan fungsi yang telah tersedia dalam bahasa R, yaitu fungsi ```dchisq()``` yang berisi parameter x dan v.
 ```R
+Diketahui :
 v = 10
 x = 3
 n = 500 
