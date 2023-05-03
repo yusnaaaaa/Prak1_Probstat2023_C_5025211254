@@ -268,7 +268,7 @@ Maka, didapatkan Nilai rataan (μ) ```10``` dan varian (σ²) ```20```
 >**Diketahui data bangkitan acak sebanyak 100 dengan mean = 45 dan sd = 5. 
 Tentukan:**
 
-* **a. Fungsi probabilitas dari distribusi Normal P(X1 ≤ x ≤ X2), hitung z-scorenya dan plot data bangkitan acaknya dalam bentuk grafik. Petunjuk (gunakan fungsi plot()).<br />
+* **a. Fungsi probabilitas dari distribusi Normal P(X1 ≤ x ≤ X2), hitung z-scorenya dan plot data bangkitan acaknya dalam bentuk grafik. Petunjuk (gunakan fungsi plot()).**<br />
 Keterangan:<br />
 X1 = Bilangan bulat terdekat di bawah rata-rata<br />
 X2 = Bilangan bulat terdekat di atas rata-rata<br />
@@ -277,36 +277,67 @@ Contoh data:<br />
 1,2,4,2,6,3,10,11,5,3,6,8<br />
 rata-rata = 5.083333<br />
 X1 = 5<br />
-X2 = 6**<br />
+X2 = 6<br />
 
+Untuk menghitung Z-Score, ketika mengenerate 100 nilai random dapat menggunakan fungsi ```rnorm()``` dengan parameter n, mean, sd. Kemudian mencari mean dari 100 nilai random menggunakan ```mean()``` dengan parameter x. Setelah itu menentukan X1 dan X2 sebagai range peluang dengan menggunakan fungsi ```floor()``` untuk mencari X1 (batas atas dari mean data), dan mencari nilai setelahnya atau X2 (batas atas mean data) menggunakan fungsi ```ceiling()```. Untuk mencari Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), dapat mengurangi ```pnorm()``` dari x2 dan x1. Kemudian untuk mencari Z-Score, dapat menggunakan rumus sebagai berikut:<br />
 
-* **b. Gambarkan histogram dari distribusi Normal dengan breaks 50**<br/ >
-Histogram dari Distribusi Chi-Square dapat dibuat menggunakan fungsi ```hist()``` dan ```rnorm()``` yang berisi parameter n, mean, sd.<br />
+```Z = (x - mean) / sd)```<br />
+
+Dengan ```x = data hasil generate```. Dan untuk membentuk grafik data generate random, dapat menggunakan fungsi ```plot()```
+
+Code:<br />
+```R
+n <- 100 
+mean <- 45 
+sd <- 5
+
+set.seed(123)
+x = rnorm(n, mean, sd)
+
+mean_data = mean(x)
+X1 = floor(mean_data)
+X1
+X2 = ceiling(mean_data)
+X2
+
+P = pnorm(X2, mean, sd) - pnorm(X1, mean, sd)
+cat("P(X1 ≤ x ≤ X2) =", P)
+
+zScore = (x - mean_data) / sd
+print("Z-Score:")
+zScore
+plot(zScore, main = "Plot Z-Score")
+```
+Output:<br />
+<img width="110" alt="image" src="https://user-images.githubusercontent.com/91377793/236019455-5c410656-2c03-4b20-b9ec-d2638c7408f5.png">
+<img width="626" alt="image" src="https://user-images.githubusercontent.com/91377793/236019634-f2802edf-5298-4a95-b423-b4ac318109ac.png">
+Maka, didapatkan P(X1 ≤ x ≤ X2) = ```0.07925971```
+
+Grafik plot:<br />
+<img width="399" alt="image" src="https://user-images.githubusercontent.com/91377793/236019796-8773e445-00c0-4a35-af4b-dfd55a3295c9.png">
+
+* **b. Gambarkan histogram dari distribusi Normal dengan breaks 50**<br />
+Histogram dari Distribusi Chi-Square dapat dibuat menggunakan fungsi ```hist()``` dan ```rnorm()``` yang berisi parameter x dan breaks.<br />
 
 Code: <br />
 ```R
 set.seed(123) 
-data <- rnorm(n, mean, sd)
-hist(data, breaks = 50,  xlab = "Nilai", ylab = "Frekuensi", main = Histogram Distribusi Normal dengan Breaks 50")
+hist(x, breaks = 50,  xlab = "Nilai", ylab = "Frekuensi", main = "Histogram Distribusi Normal dengan Breaks 50")
 ```
 
 Output:<br />
-<img width="378" alt="image" src="https://user-images.githubusercontent.com/91377793/236006462-85c6dc32-daad-4778-bf9d-75f8dce52e03.png">
+<img width="405" alt="image" src="https://user-images.githubusercontent.com/91377793/236019986-a916daa3-ae9b-42f2-a3fb-6445338b2037.png">
 
 * **c. Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal.**<br />
-Rumus yang digunakan untuk mencari variansi (σ²) dari Distribusi Normal<br />
-```R
-data <- rnorm(n, mean, sd)
-variance <- var(data)
-```
+Varian adalah hasil kuadrat dari standar deviasi. Oleh karena itu dapat menggunakan fungsi ```sd()``` yang dikuadratkan dengan parameter x sebagai hasil generate randomnya. Rumus yang digunakan untuk mencari variansi (σ²) dari Distribusi Normal<br />
+```variance = sd(x)^2```<br />
 ```R
 set.seed(123)
-data <- rnorm(n, mean, sd)
-variance <- var(data)
+variance = sd(x)^2
 cat("Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal =", variance)
 ```
 
-<img width="530" alt="image" src="https://user-images.githubusercontent.com/91377793/236006579-121bb7b7-2c97-4959-a09b-9ce7cf7008a9.png">
+<img width="534" alt="image" src="https://user-images.githubusercontent.com/91377793/236020182-84269dc1-45d7-4bd5-a01d-d9a95615fc99.png">
 
 Maka, Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal ```20.83082```
 
