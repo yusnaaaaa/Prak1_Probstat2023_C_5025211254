@@ -231,6 +231,8 @@ prob <- dchisq(x, v)
 cat("Probabilitas dari distribusi Chi-Square =", prob)
 ```
 
+<img width="344" alt="image" src="https://user-images.githubusercontent.com/91377793/236005179-55161583-c600-4f78-ae66-da0f9722dd86.png">
+
 Setelah dijalankan, maka didapatkan bahwa Probabilitas dari distribusi Chi-Square adalah ```0.02353326```
 
 * **b. Histogram dari distribusi Chi-Square dengan 500 data acak.**<br />
@@ -243,6 +245,7 @@ hist(rchisq(n,v), xlab = "Nilai x", ylab = "Frekuensi", main = "Histogram Distri
 ```
 
 Output:<br />
+<img width="353" alt="image" src="https://user-images.githubusercontent.com/91377793/236005292-f1964330-1328-4d14-b9d6-5ece7876e8f1.png">
 
 * **c. Nilai rataan (μ) dan varian (σ²) dari distribusi Chi-Square.**<br />
 Rumus yang digunakan untuk mencari Nilai rataan (μ) dari Distribusi Chi-Square<br />
@@ -256,6 +259,8 @@ cat("Nilai rataan (μ) dari distribusi Chi-Square =", mean_chisq)
 var_chisq <- 2 * v 
 cat("varian (σ²) dari distribusi Chi-Square =", var_chisq) 
 ```
+
+<img width="412" alt="image" src="https://user-images.githubusercontent.com/91377793/236005374-f1732986-61d7-47f6-ad9d-559441e0bd01.png">
 
 Maka, didapatkan Nilai rataan (μ) ```10``` dan varian (σ²) ```20```
 
@@ -282,10 +287,11 @@ Code: <br />
 ```R
 set.seed(123) 
 data <- rnorm(n, mean, sd)
-hist(data, breaks = 50,  xlab = "Nilai", main = "Histogram Distribusi Normal dengan Breaks 50")
+hist(data, breaks = 50,  xlab = "Nilai", ylab = "Frekuensi", main = Histogram Distribusi Normal dengan Breaks 50")
 ```
 
 Output:<br />
+<img width="378" alt="image" src="https://user-images.githubusercontent.com/91377793/236006462-85c6dc32-daad-4778-bf9d-75f8dce52e03.png">
 
 * **c. Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal.**<br />
 Rumus yang digunakan untuk mencari variansi (σ²) dari Distribusi Normal<br />
@@ -299,7 +305,10 @@ data <- rnorm(n, mean, sd)
 variance <- var(data)
 cat("Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal =", variance)
 ```
-Maka, Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal ```1.703304```
+
+<img width="530" alt="image" src="https://user-images.githubusercontent.com/91377793/236006579-121bb7b7-2c97-4959-a09b-9ce7cf7008a9.png">
+
+Maka, Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal ```20.83082```
 
 ## No 5
 >**Kerjakanlah menggunakan distribusi T-Student.**
