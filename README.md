@@ -309,8 +309,8 @@ zScore
 plot(zScore, main = "Plot Z-Score")
 ```
 Output:<br />
-<img width="110" alt="image" src="https://user-images.githubusercontent.com/91377793/236019455-5c410656-2c03-4b20-b9ec-d2638c7408f5.png">
-<img width="626" alt="image" src="https://user-images.githubusercontent.com/91377793/236019634-f2802edf-5298-4a95-b423-b4ac318109ac.png">
+<img width="110" alt="image" src="https://user-images.githubusercontent.com/91377793/236019455-5c410656-2c03-4b20-b9ec-d2638c7408f5.png"><br />
+<img width="626" alt="image" src="https://user-images.githubusercontent.com/91377793/236019634-f2802edf-5298-4a95-b423-b4ac318109ac.png"><br />
 Maka, didapatkan P(X1 ≤ x ≤ X2) = ```0.07925971```
 
 Grafik plot:<br />
