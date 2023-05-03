@@ -105,39 +105,32 @@ mean <- 45
 sd <- 5
 
 #4A
-# Data bangkitan acak
 set.seed(123)
-data <- rnorm(n, mean, sd)
-cat("Rata-rata Data bangkitan acak =", mean(data))
+x = rnorm(n, mean, sd)
 
-# X1 dan X2
-X1 <- floor(mean(data))
-X2 <- ceiling(mean(data))
+mean_data = mean(x)
+X1 = floor(mean_data)
+X1
+X2 = ceiling(mean_data)
+X2
 
-# Fungsi probabilitas P(X1 ≤ x ≤ X2)
-f_prob <- pnorm(X2, mean = mean(data), sd = sd(data)) - pnorm(X1 - 1, mean = mean(data), sd = sd(data))
-cat("Fungsi probabilitas P(X1 ≤ x ≤ X2) =", f_prob)
+P = pnorm(X2, mean, sd) - pnorm(X1, mean, sd)
+cat("P(X1 ≤ x ≤ X2) =", P)
 
-# Z-score
-z_score <- z <- (X1 - mean(data)) / sd(data)
-cat("Nilai dari Z-score =", z_score)
-
-# Plot data bangkitan acak
-plot(data, main = "Data Bangkitan Acak", xlab = "Nomor Data", ylab = "Nilai", col = "blue")
-abline(h = mean(data), col = "red")
-abline(h = X1, col = "green")
-abline(h = X2, col = "green")
+zScore = (x - mean_data) / sd
+print("Z-Score:")
+zScore
+plot(zScore, main = "Plot Z-Score")
 
 #4B
 set.seed(123) 
-data <- rnorm(n, mean, sd)
-hist(data, breaks = 50,  xlab = "Nilai", ylab = "Frekuensi", main = "Histogram Distribusi Normal dengan Breaks 50")
+hist(x, breaks = 50,  xlab = "Nilai", ylab = "Frekuensi", main = "Histogram Distribusi Normal dengan Breaks 50")
 
 #4C
 set.seed(123)
-data <- rnorm(n, mean, sd)
-variance <- var(data)
+variance = sd(x)^2
 cat("Nilai varian (σ²) dari hasil data bangkitan acak distribusi Normal =", variance)
+
 
 "----------No 5----------"
 
