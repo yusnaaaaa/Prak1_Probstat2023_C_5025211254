@@ -19,6 +19,7 @@ n = 10
 p = 0.488
 dbinom(x, n, p)
 ```
+<img width="661" alt="1a" src="https://user-images.githubusercontent.com/91377793/235999524-11e8dde3-ceb3-4352-ba68-68b5a7508fc9.png">
 
 Setelah dijalankan, didapat hasil seperti berikut :
 ```
