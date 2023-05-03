@@ -1,5 +1,5 @@
 # Prak1_Probstat2023_C_5025211254
-Praktikum Probabilitas dan Statistika Modul 1
+Praktikum Probabilitas dan Statistik Modul 1
 
 ## Identitas
 | Nama                   | NRP        | Kelas     |
